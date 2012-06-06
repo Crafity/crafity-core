@@ -1,0 +1,17 @@
+{
+  "name": "crafity-core",
+  "description": "Crafity Core Framework",
+  "version": "0.0.1",
+  "homepage": "http://crafity.com/projects/crafity.core",
+  "repository": {
+    "url": ""
+  },
+  "author": "Bart Riemens <briemens@crafity.com>",
+  "main": "./lib/crafity.core.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "engines": {
+    "node": "*"
+  }
+}
