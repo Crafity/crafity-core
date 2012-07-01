@@ -9,8 +9,7 @@
 /**
  * Test dependencies.
  */
-var jstest = require('crafity.jstest')
-	, assert = jstest.assert
+var jstest = require('crafity-jstest')
 	, context = jstest.createContext()
 	, core = require('../lib/crafity.core');
 
@@ -42,3 +41,12 @@ var tests = {
  */
 
 context.run(tests);
+
+require("./modules/crafity.Dictionary.test.js");
+require("./modules/crafity.Event.test.js");
+require("./modules/crafity.Exception.test.js");
+require("./modules/crafity.List.test.js");
+require("./modules/crafity.Workerpool.test.js");
+require("./modules/crafity.common.test.js");
+require("./modules/crafity.objects.test.js");
+require("./modules/crafity.strings.test.js");

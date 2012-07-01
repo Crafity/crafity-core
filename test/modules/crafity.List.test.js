@@ -9,7 +9,7 @@
 /**
  * Test dependencies.
  */
-var jstest = require('crafity.jstest')
+var jstest = require('crafity-jstest')
 	, assert = jstest.assert
 	, context = jstest.createContext()
 	, List = require('../../lib/modules/crafity.List');
