@@ -1,13 +1,13 @@
 {
 	"name": "crafity-core",
 	"description": "Crafity Core Framework",
-	"version": "0.0.2",
+	"version": "0.0.5",
 	"author": "Bart Riemens <briemens@crafity.com>",
-	"homepage": "https://github.com/Crafity/crafity-core/wiki",
+	"homepage": "http://github.com/Crafity/crafity-core/wiki",
 	"keywords": [
 		"Arrays", "Array", "Dictionary", "Events", "Event",
-		"Exception", "List", "Lists", "Objects", "Object", "Query", 
-		"Linq", "strings", "Async", "Synchronization", "Synchronizer", 
+		"Exception", "List", "Lists", "Objects", "Object", "Query",
+		"Linq", "strings", "Async", "Synchronization", "Synchronizer",
 		"Worker Pool"
 	],
 	"maintainers": [
@@ -44,13 +44,13 @@
 			"url": "https://github.com/Crafity/crafity-core/blob/master/LICENSE"
 		}
 	],
-	"bugs": "https://github.com/Crafity/crafity-core/issues",
-	"repositories": [
-		{
-			"type": "git",
-			"url": "https://github.com/Crafity/crafity-core.git"
-		}
-	],
+	"bugs": {
+		"url": "https://github.com/Crafity/crafity-core/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Crafity/crafity-core.git"
+	},
 	"dependencies": {
 		"crafity-jstest": "*"
 	},
