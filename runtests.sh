@@ -1,4 +1,3 @@
-#!/usr/local/bin/node  
-
-require('./test/crafity.core.test');
-require('./test/package.test');
+#!/bin/sh
+node ./test/crafity.core.test
+node ./test/package.test
