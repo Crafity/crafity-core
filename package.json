@@ -1,7 +1,7 @@
 {
   "name": "crafity-core",
   "description": "Crafity Core Framework",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "author": "Bart Riemens <briemens@crafity.com>",
   "homepage": "https://github.com/Crafity/crafity-core#readme",
   "keywords": [
@@ -66,7 +66,7 @@
     "url": "https://github.com/Crafity/crafity-core.git"
   },
   "dependencies": {
-    "crafity-jstest": "*"
+    "crafity-jstest": "0.0.4"
   },
   "engines": {
     "node": "*"
