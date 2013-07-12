@@ -1,8 +1,11 @@
+/*jslint node: true, bitwise: true, unparam: true, maxerr: 50, white: true, stupid: true */
+"use strict";
+
 /*!
- * crafity.Exception.test - Exception tests
- * Copyright(c) 2011 Crafity
- * Copyright(c) 2011 Bart Riemens
- * Copyright(c) 2011 Galina Slavova
+ * crafity-core - Crafity core helper library
+ * Copyright(c) 2013 Crafity
+ * Copyright(c) 2013 Bart Riemens
+ * Copyright(c) 2013 Galina Slavova
  * MIT Licensed
  */
 
@@ -10,9 +13,9 @@
  * Test dependencies.
  */
 var jstest = require('crafity-jstest')
-	, assert = jstest.assert
-	, context = jstest.createContext()
-	, Exception = require('../../lib/modules/crafity.Exception');
+  , assert = jstest.assert
+  , context = jstest.createContext()
+  , Exception = require('../../lib/modules/crafity.Exception');
 
 // Print out the name of the test module
 console.log("Testing 'crafity.Exception.js'... ");
@@ -22,14 +25,17 @@ console.log("Testing 'crafity.Exception.js'... ");
  */
 var tests = {
 
-	"Custom Exception": function () {
-		function MyException() {}
-		var ex = Exception.custom(MyException, "Test");
-		assert.areEqual("MyException", ex.constructor.name, "Expected another name");
-		assert.areEqual("Test", ex.message, "Expected another name");
-		assert.isTrue(ex instanceof MyException, "Expected to be an instanceof");
-		assert.areEqual("MyException", ex.constructor.name, "Expected to be an instanceof");
-	}
+  "Custom Exception": function () {
+    function MyException() {
+      return false;
+    }
+
+    var ex = Exception.custom(MyException, "Test");
+    assert.areEqual("MyException", ex.constructor.name, "Expected another name");
+    assert.areEqual("Test", ex.message, "Expected another name");
+    assert.isTrue(ex instanceof MyException, "Expected to be an instanceof");
+    assert.areEqual("MyException", ex.constructor.name, "Expected to be an instanceof");
+  }
 };
 
 /**

@@ -1,15 +1,18 @@
-/*jslint node:true, white:true */
+/*jslint node: true, bitwise: true, unparam: true, maxerr: 50, white: true, stupid: true */
+"use strict";
+
 /*!
- * package.test - package.json tests
- * Copyright(c) 2011 Crafity
- * Copyright(c) 2012 Galina Slavova
- * Copyright(c) 2012 Bart Riemens
+ * crafity-core - Crafity core helper library
+ * Copyright(c) 2013 Crafity
+ * Copyright(c) 2013 Bart Riemens
+ * Copyright(c) 2013 Galina Slavova
  * MIT Licensed
  */
 
 /**
  * Test dependencies.
  */
+  
 var jstest = require('crafity-jstest')
 	, assert = jstest.assert
 	, context = jstest.createContext()
@@ -18,8 +21,6 @@ var jstest = require('crafity-jstest')
 	;
 
 (function packageTests() {
-	"use strict";
-
 	/**
 	 * The tests
 	 */
@@ -29,7 +30,6 @@ var jstest = require('crafity-jstest')
 			
 			main = require('../lib/crafity.core');
 			assert.isDefined(main, "Expected main to be defined");
-			assert.areEqual(main, main.__proto__, "Expected main to be the standard module");
 		},
 
 		'package---> The module must have a fullname': function () {
