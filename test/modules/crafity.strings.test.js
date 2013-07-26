@@ -13,22 +13,15 @@
  * Test dependencies.
  */
 
-var jstest = require('crafity-jstest')
+var jstest = require('crafity-jstest').createContext("Crafity strings")
   , assert = jstest.assert
-  , context = jstest.createContext()
   , strings = require('../../lib/modules/crafity.strings');
-
-// Print out the name of the test module
-console.log("Testing 'crafity.strings.js'... ");
-
-/**
- * The tests
- */
-var tests = {
-
-};
 
 /**
  * Run the tests
  */
-context.run(tests);
+jstest.run({
+  "TODO..": function () {
+    return false;
+  }
+});

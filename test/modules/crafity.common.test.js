@@ -13,18 +13,14 @@
  * Test dependencies.
  */
 
-var jstest = require('crafity-jstest')
+var jstest = require('crafity-jstest').createContext("Crafity Common")
   , assert = jstest.assert
-  , context = jstest.createContext()
   , common = require('../../lib/modules/crafity.common');
 
-// Print out the name of the test module
-console.log("Testing 'crafity.common.js'... ");
-
 /**
- * The tests
+ * Run the tests
  */
-var tests = {
+jstest.run({
   "Validate common.arg": function () {
 
     common.arg({ name: "arg1", value: undefined });
@@ -37,9 +33,4 @@ var tests = {
 
   }
 
-};
-
-/**
- * Run the tests
- */
-context.run(tests);
+});

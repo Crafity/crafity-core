@@ -13,18 +13,14 @@
  * Test dependencies.
  */
 
-var jstest = require('crafity-jstest')
+var jstest = require('crafity-jstest').createContext("Crafity Objects")
   , assert = jstest.assert
-  , context = jstest.createContext()
   , objects = require('../../lib/modules/crafity.objects');
 
-// Print out the name of the test module
-console.log("Testing 'crafity.objects.js'... ");
-
 /**
- * The tests
+ * Run the tests
  */
-var tests = {
+jstest.run({
 
   "Compare two objects": function () {
 
@@ -56,9 +52,4 @@ var tests = {
 
   }
 
-};
-
-/**
- * Run the tests
- */
-context.run(tests);
+});

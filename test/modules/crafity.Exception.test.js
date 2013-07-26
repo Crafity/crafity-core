@@ -12,18 +12,14 @@
 /**
  * Test dependencies.
  */
-var jstest = require('crafity-jstest')
+var jstest = require('crafity-jstest').createContext("Crafity Exception")
   , assert = jstest.assert
-  , context = jstest.createContext()
   , Exception = require('../../lib/modules/crafity.Exception');
 
-// Print out the name of the test module
-console.log("Testing 'crafity.Exception.js'... ");
-
 /**
- * The tests
+ * Run the tests
  */
-var tests = {
+jstest.run({
 
   "Custom Exception": function () {
     function MyException() {
@@ -36,9 +32,4 @@ var tests = {
     assert.isTrue(ex instanceof MyException, "Expected to be an instanceof");
     assert.areEqual("MyException", ex.constructor.name, "Expected to be an instanceof");
   }
-};
-
-/**
- * Run the tests
- */
-context.run(tests);
+});

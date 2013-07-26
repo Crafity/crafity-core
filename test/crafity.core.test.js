@@ -14,19 +14,15 @@
  * Test dependencies.
  */
 
-var jstest = require('crafity-jstest')
-  , context = jstest.createContext("Crafity Core Context")
+var jstest = require('crafity-jstest').createContext("Crafity Core Context")
   , assert = jstest.assert
   , core = require('../lib/crafity.core');
 
-// Print out the name of the test module
-console.log("Testing 'crafity.core.js'... ");
-
 /**
- * The tests
+ * Run the tests
  */
 
-var tests = {
+jstest.run({
 
   "Get the current modules script by calling getScript": function () {
     var typeofWindow = typeof window;
@@ -39,11 +35,4 @@ var tests = {
     });
   }
 
-};
-
-/**
- * Run the tests
- */
-
-context.run(tests);
-
+});

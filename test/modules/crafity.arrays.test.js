@@ -13,18 +13,14 @@
  * Test dependencies.
  */
 
-var jstest = require('crafity-jstest')
+var jstest = require('crafity-jstest').createContext("Crafity Arrays")
   , assert = jstest.assert
-  , context = jstest.createContext()
   , arrays = require('../../lib/modules/crafity.arrays');
 
-// Print out the name of the test module
-console.log("Testing 'crafity.arrays.js'... ");
-
 /**
- * The tests
+ * Run the tests
  */
-var tests = {
+jstest.run({
   "Validate array.add": function () {
     var numberArray = [1, 2, 3];
 
@@ -55,9 +51,4 @@ var tests = {
     assert.isFalse(arrays.contains.not(numberArray, 4), "Expected the number 4 to be in the array");
     assert.isTrue(arrays.contains.not(numberArray, 5), "Expected the number 5 not to be in the array");
   }
-};
-
-/**
- * Run the tests
- */
-context.run(tests);
+});

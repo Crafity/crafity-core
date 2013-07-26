@@ -13,18 +13,14 @@
  * Test dependencies.
  */
 
-var jstest = require('crafity-jstest')
+var jstest = require('crafity-jstest').createContext("Crafity Events")
   , assert = jstest.assert
-  , context = jstest.createContext()
   , Event = require('../../lib/modules/crafity.Event');
 
-// Print out the name of the test module
-console.log("Testing 'crafity.Event.js'... ");
-
 /**
- * The tests
+ * Run the tests
  */
-var tests = {
+jstest.run({
   "Check if crafity.Event is available": function () {
     assert.isDefined(Event, "Expected Event to be defined");
   },
@@ -129,9 +125,4 @@ var tests = {
     assert.areEqual(2, handler2Called, "Expected the second handler to be called twice");
     assert.areEqual(0, handler3Called, "Expected the third handler not to be called");
   },
-};
-
-/**
- * Run the tests
- */
-context.run(tests);
+});

@@ -13,18 +13,14 @@
  * Test dependencies.
  */
 
-var jstest = require('crafity-jstest')
+var jstest = require('crafity-jstest').createContext("Crafity Dictionary")
   , assert = jstest.assert
-  , context = jstest.createContext()
   , Dictionary = require('../../lib/modules/crafity.Dictionary');
 
-// Print out the name of the test module
-console.log("Testing 'crafity.Dictionary.js'... ");
-
 /**
- * The tests
+ * Run the tests
  */
-var tests = {
+jstest.run({
   "When a new Dictionary instance is created Then it must be an instance of type Dictionary": function () {
     // Arrange
 
@@ -64,9 +60,4 @@ var tests = {
     assert.hasValue(result, "Expected a result");
     assert.areEqual(initialData, result, "Expected another result");
   }
-};
-
-/**
- * Run the tests
- */
-context.run(tests);
+});

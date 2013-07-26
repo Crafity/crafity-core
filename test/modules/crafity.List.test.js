@@ -13,18 +13,14 @@
  * Test dependencies.
  */
 
-var jstest = require('crafity-jstest')
+var jstest = require('crafity-jstest').createContext("Crafity List")
   , assert = jstest.assert
-  , context = jstest.createContext()
   , List = require('../../lib/modules/crafity.List');
 
-// Print out the name of the test module
-console.log("Testing 'crafity.List.js'... ");
-
 /**
- * The tests
+ * Run the tests
  */
-var tests = {
+jstest.run({
 
   "Instaniate a new list": function () {
     var list = new List();
@@ -56,9 +52,4 @@ var tests = {
     });
   }
 
-};
-
-/**
- * Run the tests
- */
-context.run(tests);
+});

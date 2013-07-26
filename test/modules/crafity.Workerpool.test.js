@@ -13,18 +13,14 @@
  * Test dependencies.
  */
 
-var jstest = require('crafity-jstest')
+var jstest = require('crafity-jstest').createContext("Crafity Workerpool")
   , assert = jstest.assert
-  , context = jstest.createContext()
   , Workerpool = require('../../lib/modules/crafity.Workerpool');
 
-// Print out the name of the test module
-console.log("Testing 'crafity.Workerpool.js'... ");
-
 /**
- * The tests
+ * Run the tests
  */
-var tests = {
+jstest.run({
 
   "Add work to a new pool which must not execute": function (context) {
     context.async(1000);
@@ -110,9 +106,4 @@ var tests = {
 
   }
 
-};
-
-/**
- * Run the tests
- */
-context.run(tests);
+});
