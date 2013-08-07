@@ -61,3 +61,5 @@ jstest.run({
     assert.areEqual(initialData, result, "Expected another result");
   }
 });
+
+module.exports = jstest;

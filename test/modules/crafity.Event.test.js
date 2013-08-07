@@ -126,3 +126,5 @@ jstest.run({
     assert.areEqual(0, handler3Called, "Expected the third handler not to be called");
   },
 });
+
+module.exports = jstest;
