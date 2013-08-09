@@ -25,3 +25,5 @@ jstest.run({
     return false;
   }
 });
+
+module.exports = jstest;

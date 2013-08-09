@@ -33,3 +33,5 @@ jstest.run({
     assert.areEqual("MyException", ex.constructor.name, "Expected to be an instanceof");
   }
 });
+
+module.exports = jstest;

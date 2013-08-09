@@ -52,3 +52,5 @@ jstest.run({
     assert.isTrue(arrays.contains.not(numberArray, 5), "Expected the number 5 not to be in the array");
   }
 });
+
+module.exports = jstest;
