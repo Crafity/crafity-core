@@ -124,7 +124,7 @@ jstest.run({
     assert.areEqual(2, handler1Called, "Expected the first handler to be called twice");
     assert.areEqual(2, handler2Called, "Expected the second handler to be called twice");
     assert.areEqual(0, handler3Called, "Expected the third handler not to be called");
-  },
+  }
 });
 
 module.exports = jstest;
